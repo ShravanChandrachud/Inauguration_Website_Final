@@ -98,7 +98,6 @@ const App = () => {
           <video
             width="100%"
             height="100%"
-            controls
             onEnded={handleVideoEnd}
             autoPlay
             className="video-player"

@@ -17,8 +17,8 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  background-image: url('Backfround-gif.gif');
+  height: 100vh;  
+  background-image: url('landing_gif.gif');
   background-size: cover; /* Cover the entire viewport */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent repeating the image */
