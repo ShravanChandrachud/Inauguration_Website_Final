@@ -17,7 +17,7 @@ const LandingPage = () => {
   const handleClick = () => {
     setIsClicked(true);
     setIsAnimate(true);
-    setTimeout(reDirect, 3150);
+    setTimeout(reDirect, 3000);
   };
 
   return (
