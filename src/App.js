@@ -35,13 +35,13 @@ const App = () => {
     setTimeout(() => {
       setShowLandingPage(true);
       triggerConfetti();
-    }, 1000);
+    }, 200);
   };
 
   const triggerConfetti = () => {
     const count = 500; // Number of confetti pieces per burst
     const rainCount = 200; // Number of continuous raining confetti pieces
-    const duration = 10000; // Duration of the continuous effect in milliseconds
+    const duration = 3500; // Duration of the continuous effect in milliseconds
 
     // Initial burst
     confetti({
