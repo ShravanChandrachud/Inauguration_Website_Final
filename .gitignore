@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Ignore the large video files
+src/Aces_bg_reel_updated.mp4
+src/Aces_inauguration_reel_final.mp4

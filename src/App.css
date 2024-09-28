@@ -1,21 +1,26 @@
 body {
   margin: 0;
   background-color: #1a1a1a;
-  overflow: hidden; /* Prevents scrollbars */
+  overflow: hidden;
+  /* Prevents scrollbars */
   font-family: Arial, sans-serif;
+  height: 100%;
 }
 
 .lock-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw; /* Ensure full width */
-  height: 100vh; /* Ensure full height */
+  width: 100vw;
+  /* Ensure full width */
+  height: 100vh;
+  /* Ensure full height */
   background-color: #1a1a1a;
 }
 
 .lock {
-  width: 500px; /* Keep the original size */
+  width: 500px;
+  /* Keep the original size */
   height: 500px;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -32,29 +37,87 @@ body {
 }
 
 @keyframes shake-1 {
-  0% { transform: translate(0, 0); }
-  10% { transform: translate(4px, 0); }
-  15% { transform: translate(6px, 0); }
-  25% { transform: translate(20px, 0); }
-  50% { transform: translate(-6px, 0); }
-  65% { transform: translate(-4px, 0); }
-  75% { transform: translate(8px, 0); }
-  80% { transform: translate(6px, 0); }
-  90% { transform: translate(4px, 0); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(4px, 0);
+  }
+
+  15% {
+    transform: translate(6px, 0);
+  }
+
+  25% {
+    transform: translate(20px, 0);
+  }
+
+  50% {
+    transform: translate(-6px, 0);
+  }
+
+  65% {
+    transform: translate(-4px, 0);
+  }
+
+  75% {
+    transform: translate(8px, 0);
+  }
+
+  80% {
+    transform: translate(6px, 0);
+  }
+
+  90% {
+    transform: translate(4px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes shake-2 {
-  0% { transform: translate(0, 0); }
-  10% { transform: translate(4px, 0); }
-  15% { transform: translate(6px, 0); }
-  25% { transform: translate(20px, 0); }
-  50% { transform: translate(-6px, 0); }
-  65% { transform: translate(-4px, 0); }
-  75% { transform: translate(8px, 0); }
-  80% { transform: translate(6px, 0); }
-  90% { transform: translate(4px, 0); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(4px, 0);
+  }
+
+  15% {
+    transform: translate(6px, 0);
+  }
+
+  25% {
+    transform: translate(20px, 0);
+  }
+
+  50% {
+    transform: translate(-6px, 0);
+  }
+
+  65% {
+    transform: translate(-4px, 0);
+  }
+
+  75% {
+    transform: translate(8px, 0);
+  }
+
+  80% {
+    transform: translate(6px, 0);
+  }
+
+  90% {
+    transform: translate(4px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .unlock {
@@ -62,8 +125,13 @@ body {
 }
 
 @keyframes unlock {
-  0% { transform: rotate(0); }
-  100% { transform: rotate(90deg); }
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(90deg);
+  }
 }
 
 /* Unlocking animation applied on unlock action */
@@ -72,37 +140,54 @@ body {
 }
 
 @keyframes unlocking {
-  0% { transform: rotate(0); }
-  50% { transform: rotate(45deg); }
-  100% { transform: rotate(90deg); }
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
+  }
 }
 
 .video-container {
-  position: absolute;
+  position: fixed;
+  /* Ensure the video container takes up the whole screen */
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7); /* Dark overlay for video */
+  background: rgba(0, 0, 0, 0.7);
+  /* Dark overlay for video */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2; /* Ensure it's above other content */
-  opacity: 0; /* Start hidden */
-  transition: opacity 1s ease-in-out; /* Smooth transition */
+  z-index: 2;
+  /* Ensure it's above other content */
+  opacity: 0;
+  /* Start hidden */
+  transition: opacity 1s ease-in-out;
+  /* Smooth transition */
 }
 
 .video-container.show {
-  opacity: 1; /* Show the video */
+  opacity: 1;
+  /* Show the video */
+  pointer-events: none;
 }
 
 .video-container video {
-  max-width: 90%;
-  max-height: 90%;
-/* border: 5px solid #fff; Optional: border around the video*/
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
-  
+  width: 100vw;
+  /* Ensure video takes up the full width of the screen */
+  height: 100vh;
+  /* Ensure video takes up the full height of the screen */
+  object-fit: cover;
+  /* Ensures video covers the whole area without distortion */
 }
+
 
 .landing-page {
   text-align: center;
@@ -110,12 +195,18 @@ body {
   font-size: 24px;
   animation: fadeIn 1.5s ease forwards;
   position: relative;
-  z-index: 1; /* Ensure it's above the background */
+  z-index: 1;
+  /* Ensure it's above the background */
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .gif-container {

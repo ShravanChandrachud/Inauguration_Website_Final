@@ -3,7 +3,7 @@ import './App.css';
 import lockgif from "./unlock.gif";
 import newgif from "./Lock.gif";
 import LandingPage from './landing_page';
-import myvideo from './ACES_bg_reel_quality.mp4';
+import myvideo from './Aces_inauguration_reel_final.mp4';
 import confetti from 'canvas-confetti';
 
 const App = () => {
@@ -41,7 +41,7 @@ const App = () => {
   const triggerConfetti = () => {
     const count = 500; // Number of confetti pieces per burst
     const rainCount = 200; // Number of continuous raining confetti pieces
-    const duration = 3500; // Duration of the continuous effect in milliseconds
+    const duration = 3000; // Duration of the continuous effect in milliseconds
 
     // Initial burst
     confetti({
