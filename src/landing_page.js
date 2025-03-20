@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import './landing_page.css';
-import logo from './logowhite.png';
+import innoverseLogo from './innoverse_logo.png';
 
 const LandingPage = () => {
   const fadeInProps = useSpring({ opacity: 1, from: { opacity: 0 }, config: { duration: 1500 } });
@@ -26,13 +26,13 @@ const LandingPage = () => {
       <animated.div style={fadeInProps} className="header">
         <div className={`logo-ele ${isAnimate ? `animate` : ``}`}>
           <img
-            src={logo}
+            src={innoverseLogo}
             alt="ACES Logo"
             className={`logo ${isAnimate ? `animate-logo ${isClicked ? 'hover-effect' : ''}` : ''}`} // Apply hover-effect conditionally
             onClick={handleClick}
           />
         </div>
-        {!isAnimate && <animated.h1 style={zoomInProps} className={isAnimate ? `hidden` : ``}>Welcome to ACES INAUGURATION 2024-25</animated.h1>}
+        {!isAnimate && <animated.h1 style={zoomInProps} className={isAnimate ? `hidden` : ``}>Welcome to INNOVERSE INAUGURATION 2024-25 by ACES</animated.h1>}
       </animated.div>
       <div className={`content ${isAnimate ? `hidden` : ``}`}>
         <animated.p style={fadeInProps}>We are excited to have you join us for an amazing year of learning and growth.</animated.p>
